@@ -1,1 +1,13 @@
+* Functional Requirements
+
+1.)The system will be accesible for the registered users and admin.
+2.)The system will provide the role wise dashboard navigation.
+3.)The user will be accessible for viewing their personal data.
+4.)The admin will be accesible for viewing the business data.
+
+-> USER
+
+
+* Non Functional Requirements
+
 
