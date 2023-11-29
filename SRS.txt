@@ -1,3 +1,5 @@
+Objective
+This system will help and allow the Admin to maintain their business records.
 * Functional Requirements
 
 1.)The system will be accesible for the registered users and admin.
