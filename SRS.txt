@@ -1,7 +1,10 @@
-Objective
+* Objective
+
 This system will help and allow the Admin to maintain their business records.
-Scope
+* Scope
+
 The scope of the project is to develop a web-based application that helps Admin maintain their business records. The application will provide functionalities to register users,pick-up person,manage coupons transactions.
+
 * Functional Requirements
 
 1.)The system will be accesible for the registered users and admin.
@@ -11,27 +14,63 @@ The scope of the project is to develop a web-based application that helps Admin 
 
 -> USER
 
+Only registered users can log into the system.
+Users can modify their profile.
+Registered users will be able to get customer support.
+Users can access their own details only.
+Users can see their history of orders and clothes exchanges carried out by the company.
+Users can see the status of their clothes sent for exchange and the probable discount on the former.
+Users can see their collected points for their exchanges in that particular year.
+
+->ADMIN
+
+~ Admin will be responsible for coordinating activities, managing schedules, and ensuring deliverables are completed on time and within budget.
+~ Dashboard will provide information using graphs, indicators, as well as grid data presentation which will be accesible to the admin.
+
+-> PICKUP AND QUALITY CONTROL
+
+Only registered consignees can log into the system.
+Consignees can modify their profile.
+Registered consignees will be able to get support when required.
+Consignees can access their own details only.
+Consignees can see their revenue for their particular completed exchanges for every month.
+Quality control person will update the report of received clothes to the portal.
+
+
 
 * Non Functional Requirements
-->Security
-.Only Admin  will see all records.
-.Only Admin should be able to modify their own personal details.
-.User can log in with their user ID and password. Admin and user can access their details.
-No user can access other users' details except admin.
-System will provide access to the content, operations using Role-based security (Authorization) (Permissions based on Role).
-->Reliability
-The system will back up user data regularly and recover it in a short time to keep the system operational.
-Continuous updates are maintained through email, and continuous administration is done to keep contact with users.
-During peak hours, the system will maintain the same user experience by managing load balancing.
-->Availability
-Uptime: 24*7 available, 99.999%
+
+->SECURITY
+
+~ Only Admin  will see all records.
+~ Only Admin should be able to modify their own personal details.
+~ User can log in with their user ID and password. Admin and user can access their details.
+~ No user can access other users' details except admin.
+~ System will provide access to the content, operations using Role-based security (Authorization) (Permissions based on Role).
+
+->RELIABILITY
+
+~ The system will back up user data regularly and recover it in a short time to keep the system operational.
+~ Continuous updates are maintained through email, and continuous administration is done to keep contact with users.
+~ During peak hours, the system will maintain the same user experience by managing load balancing.
+
+->AVAILABILITY
+
+~ Uptime: 24*7 available, 99.999%
+
 ->Maintainability
-->Portability
-The system will provide a portable User Interface (HTML, CSS, React) through which users will access the web application.
-->Accessibility
-Only registered users will be able to log in after authentication.
-->Durability
-The system will maintain users' details.
-The system will implement backup and recovery for retaining users' data and their business data over time.
+
+->PORTABILITY
+
+~ The system will provide a portable User Interface (HTML, CSS, React) through which users will access the web application.
+
+->ACCESIBILITY
+
+~ Only registered users will be able to log in after authentication.
+
+->DURABILITY
+
+~ The system will maintain users' details.
+~ The system will implement backup and recovery for retaining users' data and their business data over time.
 
 
