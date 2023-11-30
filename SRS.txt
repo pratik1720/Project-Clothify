@@ -24,8 +24,8 @@ Users can see their collected points for their exchanges in that particular year
 
 ->ADMIN
 
-~ Admin will be responsible for coordinating activities, managing schedules, and ensuring deliverables are completed on time and within budget.
-~ Dashboard will provide information using graphs, indicators, as well as grid data presentation which will be accesible to the admin.
+~ Admin will be responsible for coordinating activities, managing schedules, and ensuring deliverables are completed on time.
+~ Dashboard will provide information using data presentation which will be accesible to the admin.
 
 -> PICKUP AND QUALITY CONTROL
 
