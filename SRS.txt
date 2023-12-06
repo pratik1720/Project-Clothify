@@ -26,8 +26,10 @@ Users can see the status of their clothes sent for exchange and the probable dis
 Users can see their collected points for their exchanges in that particular year.
 
 ->ADMIN
-~ Admin will be responsible for coordinating activities, managing schedules, and ensuring deliverables are completed on time.
-~ Dashboard will provide information using data presentation which will be accesible to the admin.
+~ Admin will be responsible for coordinating activities, managing schedules
+and ensuring deliverables are completed on time.
+~ Dashboard will provide information using data presentation 
+which will be accesible to the admin.
 
 -> PICKUP AND QUALITY CONTROL
 Only registered consignees can log into the system.
