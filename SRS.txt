@@ -5,7 +5,9 @@ Clothify
 This system will help and allow the Admin to maintain their business records.
 
 * Scope
-The scope of the project is to develop a web-based application that helps Admin maintain their business records. The application will provide functionalities to register users,pick-up person,manage coupons transactions.
+The scope of the project is to develop a web-based application that helps Admin 
+maintain their business records. The application will provide functionalities to
+register users,pick-up person,manage coupons transactions.
 
 * Functional Requirements
 1.)The system will be accesible for the registered users and admin.
