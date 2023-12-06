@@ -2,7 +2,7 @@
 Clothify
 
 * Objective
-This system will help and allow the Admin to maintain their business records.
+This system will help provide coupons to the user in the exchange of used clothes and these coupons will be used to get discount on various brands.
 
 * Scope
 The scope of the project is to develop a web-based application that helps Admin 
