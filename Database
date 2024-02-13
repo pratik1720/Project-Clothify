@@ -4,9 +4,9 @@
   2 Pick_Up Person Table
   1 Id(PK) 2 Name 3 Emial 4 UserName(Uk)(Not Null) 5 Phone_no 6 Password(UK)(NOT NULL) 7 Address. 8 Adhar_no 9 Profile_pic 10 isActive.
   3 Send Order Table
-  1 Id(PK) 2 Order_Id 3 UserId(FK) 4 Pick_PPId(Fk) 5 Tpye 6 Quantity 7 Images 8 Address 9 Status(bool) 10 Date 11 Time
+  1 Id(PK) 2 Order_Id 3 UserId(FK) 4 Pick_PPId(Fk) 5 Type 6 Quantity 7 Images 8 Address 9 Status(bool) 10 Date 11 Time
   4 Accept Order Table
-  1 Id(PK) 2 Order_Id 3 Send_OrderId(FK) 4 PPId(Fk) 5 Uername 6 Accept_order(bool) 7  8 Coupon_Id(FK) 
+  1 Id(PK) 2 Order_Id 3 Send_OrderId(FK) 4 PPId(Fk) 5 Username 6 Accept_order(bool) 7  8 Coupon_Id(FK) 
   5 Coupons
   1 Id(PK) 2 Brand_name 3 Discount 4 Validity
 
