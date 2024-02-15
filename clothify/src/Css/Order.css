@@ -1,5 +1,11 @@
+.order{
+    background-image: url(./../Images/background.webp) ;
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    /* background-position: center center */
+}
 .app-box {
-    margin:auto;
+    margin:0,0;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 10px;
@@ -8,8 +14,9 @@
     width:100%;
     align-self: center;
     padding-top: 50px;
-    margin-top: 20px;
+   
     /* Adjust the width as needed */
+   
 }
 
 .app-star-rating {

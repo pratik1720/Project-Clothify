@@ -1,6 +1,8 @@
+import "../Css/Contact.css";
 const Contact=()=>{
 
     return (
+      <div className="contact">
         <div className="container mt-5" style={{width:"600px" ,margin:"auto"}}>
         <div className="row justify-content-center">
           <div className="col-md-6">
@@ -63,7 +65,7 @@ const Contact=()=>{
           </div>
         </div>
       </div>
-   
+      </div>
     )
 }
 

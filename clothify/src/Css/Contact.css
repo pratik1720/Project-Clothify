@@ -1,0 +1,7 @@
+.contact{
+    background-image: url(./../Images/contact.webp);
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+    
+}

@@ -1,0 +1,12 @@
+.home{
+    height: 100%;
+  
+    z-index: -1;
+     background-repeat: no-repeat
+}
+#mainHeading{
+    text-align: center;
+}
+#green{
+    color:  #0ab2be;
+}

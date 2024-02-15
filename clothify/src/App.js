@@ -16,6 +16,10 @@ import DashBoard from './Components/DashBoard';
 
 import PickUpPersonLogin from './Components/PickUpPersonLogin';
 import PickUpPerson from './Components/PickUpPerson';
+import Coupons from './Components/Coupons';
+import AllotedCoupons from './Components/AllocatedCoupons';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -36,6 +40,8 @@ function App() {
     <Route path="/dashBoard" element={<DashBoard/>} />
     <Route path="/pickupPersonLogin" element={<PickUpPersonLogin/>}  />
     <Route path="/pickupPerson" element={<PickUpPerson/>}  />
+    <Route path="/coupons" element={<Coupons/>}  />
+    <Route path="/allocatedCoupons" element={<AllotedCoupons/>}  />
   </Routes>
   <Footer></Footer>
   </BrowserRouter>

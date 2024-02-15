@@ -1,9 +1,11 @@
 /* Add this to your custom CSS file */
 .image-carousel-container {
-    width: 30%;
+    width: 60%;
     max-width: 800px; /* Adjust this value as needed for your design */
-    margin: 0 auto;
+    margin: 0 0;
+   
     overflow: hidden;
+    
   }
   
   .image-carousel {
@@ -54,4 +56,6 @@
   .carousel .control-dots .dot.selected {
     background: #333;
   }
-  
+  .carousel-text{
+    color:  #0ab2be;
+  }

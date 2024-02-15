@@ -4,8 +4,9 @@
     color: white;
     text-align: center;
     position:relative;
-    margin-top: auto;
-   
+     /* margin-top: auto;  */
+     bottom: 0;
+     width: 100%;
   }
   
   .footer-content {

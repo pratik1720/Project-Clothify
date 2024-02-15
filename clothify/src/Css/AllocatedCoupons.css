@@ -1,0 +1,50 @@
+.AllocatedMain{
+    
+    /* background-size:     cover;                     */
+  
+    /* background-size: contain; */
+    
+    /* border: 2px solid black; */
+}
+.deal{
+
+    background-image: url(./../Images/AllocatedDeals.png) ;
+    background-repeat:   no-repeat;
+    background-position: top right;
+    padding-top: 10px;
+    margin-top: 10px;
+    height: 620px;
+    width: 700px;
+}
+.order-table {
+    width: 40%;
+    margin: 0 0;
+    height: 50%;
+    /* border-collapse: collapse; */
+    border: 2px solid black;
+}
+.order-table th,
+.order-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.order-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.order-table td {
+    text-align: center;
+}
+.order-page {
+    text-align: center;
+    padding: 20px;
+    height: 500px;
+    border: 2px solid  black;
+}
+.man{
+
+    width: 450px;
+    
+}

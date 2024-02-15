@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import clothifyLogo from '../Images/clothify.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faTwitter, faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import '../Css/Footer.css';
@@ -20,19 +20,19 @@ const Footer =()=>{
         <div className="footer-social">
             <a href="https://www.gmail.com/" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faEnvelope} /> 
-        </a><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-             <FontAwesomeIcon icon={faFacebook} /> 
+        </a><a href="https://www.github.com/" target="_blank" rel="noopener noreferrer">
+             <FontAwesomeIcon icon={faGithub} /> 
           </a>
           <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
              <FontAwesomeIcon icon={faTwitter} /> 
           </a>
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-             <FontAwesomeIcon icon={faInstagram} /> 
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+             <FontAwesomeIcon icon={faLinkedin} /> 
           </a>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2023 Uniguide. All rights reserved.</p>
+        <p>&copy; 2024 Uniguide. All rights reserved.</p>
       </div>
     </footer>
     </>

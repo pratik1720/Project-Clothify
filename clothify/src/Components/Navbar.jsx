@@ -26,7 +26,7 @@ export default  function Navbar ()
       <li><Link to="/about">About Us</Link></li>
       <li><Link to="/order">Order Now!</Link></li>
       <li><Link to="/contact">Contact Us</Link></li>
-      <li><Link to="/cart">Cart</Link></li>
+      <li><Link to="/allocatedCoupons">Allocated Coupons</Link></li>
    
       {isLoggedIn ? <b>{ sessionStorage['username']  }</b>:""}
       <li className="dropdown">
@@ -35,7 +35,7 @@ export default  function Navbar ()
           {!isLoggedIn? (
             <div>
             <Link to="/login" onClick={handleLogin}>User Login</Link>
-            <Link to="/pickupPerson" onClick={handleLogin}>PickupPerson Login</Link>
+            <Link to="/pickupPersonLogin" onClick={handleLogin}>PickupPerson Login</Link>
             </div>
           ) : (
             <>

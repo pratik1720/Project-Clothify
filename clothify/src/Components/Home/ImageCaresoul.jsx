@@ -12,6 +12,7 @@ const ImageCarousel =()=>{
 ]
 return (
     <div>
+      
 <div className="image-carousel-container">
 <Carousel
   showStatus={false}

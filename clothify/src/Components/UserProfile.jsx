@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import '../Css/Profile.css';
 export default function UserProfile(){
     const[isSidebarOpen,setisSidebarOpen]=useState(false)
     
@@ -8,7 +8,7 @@ export default function UserProfile(){
     }
     return (
 
-        <div>
+        <div className="profile">
             <div >
         {/* Profile icon in the navbar */}
         <button onClick={toggleSidebar}>

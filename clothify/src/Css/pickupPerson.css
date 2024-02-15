@@ -5,7 +5,7 @@
 .order-page {
     text-align: center;
     padding: 20px;
-    height: 100px;
+    height: 100%;
 }
 
 .college-heading {
@@ -19,7 +19,7 @@
     margin: 0 0;
     height: 100%;
     /* border-collapse: collapse; */
-    border: 1px solid #ccc;
+    border: 1px solid black;
 }
 
 .order-table th,

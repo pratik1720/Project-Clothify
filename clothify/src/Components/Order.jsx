@@ -9,7 +9,7 @@ const Order=()=>{
     const [pickupDate, setpickupDate] = useState(new Date());
     const [pickupDescription, setpickupDescription] = useState('');
     const [noOfItems, setnoOfItems] = useState(0);
-    const [uid, setuid] = useState({uid:0});
+    const [uid, setuid] = useState({uid:sessionStorage['uid']});
 
     const uidHandler=(e)=>{
         const { name, value } = e.target;
@@ -35,8 +35,8 @@ const Order=()=>{
     
     
    return(
-        
-        <div className="app-box app-feedback-form " style={{alignSelf:'center',margin:'auto',marginTop:'10px',marginBottom:"10px"}}>
+          <div className='order'>
+        <div className="app-box app-feedback-form  " style={{left:'0px'}}>
                 <h2 className="app-heading1">Order Now</h2><br></br><br></br>
                     <form onSubmit={handleSubmit} className="app-feed-form"> 
                     <label className="label">
@@ -89,7 +89,7 @@ const Order=()=>{
                          value={uid.uid}
                          onChange={uidHandler}
                          className={uid.uid.length ? '': 'error'}
-                        required 
+                        readOnly
                     />
                     </label>
                     <center><button type="submit" className="button">Order Now</button></center>
@@ -98,6 +98,7 @@ const Order=()=>{
             
                 
             
+                </div>
                 </div>
    ) }
 
