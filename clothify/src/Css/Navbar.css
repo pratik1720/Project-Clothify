@@ -1,6 +1,6 @@
 
 .navbar {
-    background-color: #0ab2be; /* Light orange background color */
+    background-color: white; /* Light orange background color */
     padding: 1rem 0;
     display: flex;
     justify-content: space-between;
@@ -37,14 +37,14 @@
   }
   
   .nav-list a {
-    color: black;
+    color: gray;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
   }
   
   .nav-list a:hover {
-    color: #0056b3;
+    color:  #e63843;
   }
   
   .dropdown {

@@ -21,6 +21,7 @@ import AllotedCoupons from './Components/AllocatedCoupons';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PickUpPersonfeedback from './Components/PickUpPersonfeedback';
+import UserLogin from './Components/UserLogin';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
     <Navbar></Navbar>
     <Routes>
     <Route path="/login" element={<Login/>} />
+    <Route path="/userlogin" element={<UserLogin/>} />
     <Route path="/registration" element={<Register/>} />
     <Route path="/forgetpassword" element={<ForgetPass/>} />
     <Route path="/" element={<Home/>} />

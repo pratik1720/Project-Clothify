@@ -5,11 +5,9 @@ const Home=()=>{
     <>
      <div className="home">
      <div className="clothify-content"> 
-        <h1 id="mainHeading">Welcome to Our Store!</h1>
-        <h2 id="green">Discover New Exchnge  Opportunities</h2>
-        <p>
-          Explore a wide range of clothes exchnage opportunities resources to help you get discount coupons.
-        </p>
+        <h2 id="mainHeading">For People And Planet.</h2>
+        
+        
       </div>
       <ImageCarousel></ImageCarousel>
      </div>

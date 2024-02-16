@@ -1,14 +1,15 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import image1 from '../../Images/Brands.png';  
-import image2 from '../../Images/offers.jpg';
+import image1 from '../../Images/Levis.jpg';  
+import image2 from '../../Images/Zara.avif';
  import '../../Css/Home/ImageCaresoul.css';
+import { faAlignCenter } from '@fortawesome/free-solid-svg-icons';
 
 const ImageCarousel =()=>{
     const images=[
-        {src:image1, text:'brands coupons'},
-    {src:image2, text:'exchnage offers'}
+        {src:image1, text:"Exchange 'n' Wear"},
+    {src:image2, text:"Exchange 'n' Wear"}
 ]
 return (
     <div>
@@ -27,7 +28,7 @@ return (
     {images.map((image, index) => (
         <div key={index}>
            <img src={image.src} alt={`Image ${index + 1}`} />
-         <h3> <p className="carousel-text">{image.text}</p></h3>
+         <h3> <p  className="carousel-text">{image.text}</p></h3>
         </div>
       ))}
         </Carousel>
