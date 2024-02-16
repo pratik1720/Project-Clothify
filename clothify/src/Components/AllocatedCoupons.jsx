@@ -50,11 +50,10 @@ const AllotedCoupons =()=>{
        Details.map((user) => (
        <tr key={user.uid}>
         <td>{user[1]}</td>
-         <td>{user[6]}</td>
-         <td>{user[7]}</td>
-         <td>{user[8]}</td>
          <td>{user[9]}</td>
-         <td>{ user[10]}</td>
+         <td>{user[10]}</td>
+         <td>{user[11]}</td>
+        
         </tr>
        ))}
      </tbody>

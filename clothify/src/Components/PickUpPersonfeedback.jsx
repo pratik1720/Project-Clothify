@@ -1,69 +1,69 @@
 import { useEffect, useState } from "react";
 import  axios from "axios";
 import {URL} from "../config.js"
+import { useNavigate } from "react-router-dom";
 const PickUpPersonfeedback =()=>{
      const[pickUpPersons,setPickUpPersons]=useState([{}])
-     const [pickupDate, setpickupDate] = useState(new Date());
-     const [pickupDescription, setpickupDescription] = useState('');
-     const [noOfItems, setnoOfItems] = useState(0);
-     const [uid, setuid] = useState({uid:sessionStorage['uid']});
- 
-     const uidHandler=(e)=>{
-         const { name, value } = e.target;
-         setuid((prev) => ({
-           ...prev,
-           [name]:value
-         }));
-     }
+      const [FeedBackPickUpPerson, setFeedBackPickUpPerson] = useState('');
+      const[pickUpPerson,setPickUpPerson]=useState('');
+       useEffect(()=>{
+        try {
+              axios.get(`${URL}/getPickUPPersons`).then((response)=>{
+                console.log(response.data)
+                setPickUpPersons(response.data)
+                setPickUpPerson(response.data[0].name)
+              })
+        } catch (error) {
+            
+        }
+     },[])
+    
      const handleSubmit =async(e)=>{
       
       e.preventDefault();
-      console.log(pickupDate,pickupDescription,noOfItems,uid)
-         const body={pickupDate,pickupDescription,noOfItems,uid}
+
+     const person= pickUpPersons.filter(p=>(p.name==pickUpPerson))
+      console.log(sessionStorage['uid'],pickUpPerson,FeedBackPickUpPerson,person[0].pid)
+      console.log(person)
+
+        const body={feedBackPickUpPerson:FeedBackPickUpPerson,uid:{uid:sessionStorage['uid']},pid:{pid:person[0].pid}}
          try {
-           axios.post(`${URL}/order`,body).then((response)=>{
+           axios.post(`${URL}/PickupPersonFeedback`,body).then((response)=>{
              console.log(response.data)
+             
            }).catch() 
          } catch (e) {
            
          }
         
    }
-     useEffect(()=>{
-        try {
-              axios.get(`${URL}/getPickUPPersons`).then((response)=>{
-                console.log(response.data)
-                setPickUpPersons(response.data)
-              })
-        } catch (error) {
-            
-        }
-     },[])
+    
     return(
         <div >
         <div className="app-box app-feedback-form  "  style={{alignSelf:'center',margin:'auto',marginTop:'10px',marginBottom:"10px"}}>
-                <h2 className="app-heading1"></h2><br></br><br></br>
+                <h2 className="app-heading1">PickUpPerson FeedBack</h2><br></br>
                     <form onSubmit={handleSubmit} className="app-feed-form"> 
                    
-                    <br />
+                    
                     <label>
-                    Description About Clothes:
+                     FeedBack
                     <textarea
-                        name="pickupDescription"
-                        value={pickupDescription}
-                        onChange={(e) => setpickupDescription(e.target.value)}
-                        className={pickupDate.length ? '': 'error'}
+                        name="FeedBackPickUpPerson"
+                        value={FeedBackPickUpPerson}
+                        onChange={(e) => setFeedBackPickUpPerson(e.target.value)}
+                        className={FeedBackPickUpPerson.length ? '': 'error'}
                         required 
                     />
                     </label>
                     <br />
                     
-                    <select>
-                   { pickUpPersons.map((user) => (
-  <option value={user.name}>{user.name}</option>
+                    <select onChange={(e)=>{setPickUpPerson(e.target.value)}}>
+                   { pickUpPersons.map((pickup) => (
+  <option value={pickup.name}  >{pickup.name}</option>
                     ))}
 </select>
-                    <center><button type="submit" className="button">Order Now</button></center>
+
+                    <center><button type="submit" className="button" style={{margin:"10px"}}>Submit</button></center>
                 </form> 
                 
             
