@@ -1,7 +1,13 @@
 .contact{
-    background-image: url(./../Images/contact.webp);
+    /* background-image: url(./../Images/contact.webp);
     background-size:     cover;                      /* <------ */
-    background-repeat:   no-repeat;
-    background-position: center center;
+    /* background-repeat:   no-repeat;
+    background-position: center center;  */
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     
 }

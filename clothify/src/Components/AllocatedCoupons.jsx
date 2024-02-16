@@ -27,10 +27,10 @@ const AllotedCoupons =()=>{
     return(
         
         <div className="AllocatedMain d-flex justify-content-center"> 
-        <div className="deal"></div>
+        <img src="./AllocatedDeals.png" style={{width:"500px", height:"500px"}} />
       
         
-        <div className="man "> <img src={CouponPointing} alt=""  /></div>
+        {/* <div className="man "> <img src={CouponPointing} alt=""  /></div> */}
    <div className="order-page">
    <h2 id="d">Allocated Coupons</h2>
  

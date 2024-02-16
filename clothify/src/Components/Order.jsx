@@ -36,6 +36,7 @@ const Order=()=>{
     
    return(
           <div className='order'>
+            <img src='./order.svg' style={{width:"400px",height:"400px"}}/>
         <div className="app-box app-feedback-form  " style={{left:'0px'}}>
                 <h2 className="app-heading1">Order Now</h2><br></br><br></br>
                     <form onSubmit={handleSubmit} className="app-feed-form"> 

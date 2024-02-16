@@ -1,6 +1,7 @@
 .signout-page{
     border: 2px solid black;
     height: 490px; 
+    padding: "10px";
 }
 .out{
   align-items: center;

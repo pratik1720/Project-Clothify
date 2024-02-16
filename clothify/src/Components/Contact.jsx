@@ -3,6 +3,7 @@ const Contact=()=>{
 
     return (
       <div className="contact">
+        <img src="./contact.svg"/>
         <div className="container mt-5" style={{width:"600px" ,margin:"auto"}}>
         <div className="row justify-content-center">
           <div className="col-md-6">

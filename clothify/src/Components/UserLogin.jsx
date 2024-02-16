@@ -52,12 +52,15 @@ const UserLogin= ()=>{
     }
    };
     return(
-    <div className="container mt-5 " style={{width:"600px" ,margin:"auto" ,marginTop:"20px",marginBottom:"20px"}} >
-    <div className="row justify-content-center ">
+    <div className="container mt-5 " style={{width:"800px" ,margin:"auto" ,marginTop:"20px",marginBottom:"20px",padding:"10px",display:"flex",justifyContent:"space-around",alignItems:"center"
+}} >
+  <img  src="./login.svg" width="500px" height="500px"/>
+    <div className="row justify-content-center">
+    
       <div className="col-md-6">
      
           <div className="card-body box">
-            <form className="login-form">
+            <form className="login-form p-5">
               <h2 className="text-center login-heading">Login</h2>
               <div className="form-group">
                <b> <label htmlFor="username" className="font-weight-bold">Username:</label></b>
@@ -83,7 +86,7 @@ const UserLogin= ()=>{
                 />
               </div>
               <div className="text-center mt-4">
-                <button className="btn btn-primary" onClick={CheckCredential} >Login</button>
+                <button className="btn btn-danger" onClick={CheckCredential} >Login</button>
               </div>
               <br />
               <div className="text-center mt-3">
