@@ -56,7 +56,7 @@ const PickUpPersonLogin=()=>{
             <form className="login-form">
            <h2 className="text-center login-heading"> Login</h2>
               <div className="form-group">
-              <b  style={{marginLeft:'250px'}}> PickUpPerson </b>
+              <b  style={{marginLeft:"100px"}}> PickUpPerson </b> <br/>
               <b> <label htmlFor="username" className="font-weight-bold"> Username:</label></b>
                
                 <input

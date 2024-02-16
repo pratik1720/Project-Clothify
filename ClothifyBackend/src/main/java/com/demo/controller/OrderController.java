@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -35,6 +36,13 @@ public class OrderController {
 			  
 			  return ResponseEntity.ok(order1);
 		   }
+		   return ResponseEntity.noContent().build();
+	   }
+	@PutMapping("/completeOrder")
+	   public ResponseEntity<?> completeOrder(@RequestBody Order order){
+		   
+		        service.complete(order);
+		  
 		   return ResponseEntity.noContent().build();
 	   }
 	

@@ -24,13 +24,24 @@ const Coupons =()=>{
         }
         else{
          
-          console.log(location.state)
-            const uid=location.state
-              const body={brand,discount,validity,uid:{uid}}
+          // console.log(location.state)
+            const uid=location.state.uid
+            console.log(location.state)
+              const body={brand,discount,validity,uid:{uid:location.state.uid}}
               try {
                 axios.post(`${URL}/addCoupons`,body).then((response)=>{
                   console.log(response.data)
-                  navigate("/pickupPerson")
+                  try {
+                    const body={oid:location.state.oid,uid:{uid}}
+                    axios.put(`${URL}/completeOrder`,body).then((response)=>{
+                      console.log(response.data)
+                   
+                      
+                    }).catch() 
+                  } catch (e) {
+                    
+                  }
+                  navigate("/pickupPerson" )
                 }).catch() 
               } catch (e) {
                 
