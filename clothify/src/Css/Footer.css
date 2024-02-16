@@ -3,7 +3,7 @@
     padding: 1rem;
     color: white;
     text-align: center;
-    position:relative;
+    position:sticky;
      /* margin-top: auto;  */
      bottom: 0;
      width: 100%;

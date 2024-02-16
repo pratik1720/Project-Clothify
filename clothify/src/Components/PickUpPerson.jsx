@@ -30,7 +30,7 @@ const PickUpPerson =()=>{
        let pid= parseInt(sessionStorage["pid"])
          console.log(oid ,pid)
          const body ={oid,pid:{pid}}
-        axios.post(`${URL}/acceptUser`, body).then((response)=>{
+        axios.post(`${URL}/acceptPickUpOrder`, body).then((response)=>{
           console.log(response.data)
           }).catch()
        })
@@ -47,7 +47,7 @@ const PickUpPerson =()=>{
       navigate("/coupons",{state:user})
     }
   return (
-    <div > 
+    <div  className="ordertable"> 
              <h2 id="d">Authorised PickUpPerson</h2>
         <div className="order-page">
       <br></br>

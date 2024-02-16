@@ -20,6 +20,7 @@ import Coupons from './Components/Coupons';
 import AllotedCoupons from './Components/AllocatedCoupons';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import PickUpPersonfeedback from './Components/PickUpPersonfeedback';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
     <Route path="/pickupPerson" element={<PickUpPerson/>}  />
     <Route path="/coupons" element={<Coupons/>}  />
     <Route path="/allocatedCoupons" element={<AllotedCoupons/>}  />
+    <Route path="/PickUpPersonfeedback" element={<PickUpPersonfeedback/>}  />
   </Routes>
   <Footer></Footer>
   </BrowserRouter>

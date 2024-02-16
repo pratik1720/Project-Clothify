@@ -42,7 +42,7 @@ export default  function Navbar ()
               <Link to="/profile">
                 Profile <FontAwesomeIcon icon={faUser} className="profile-icon" />
               </Link>
-              <Link to="/appfeedback">Feedback</Link>
+              <Link to="/PickUpPersonfeedback">Feedback</Link>
               <Link to="/signout" onClick={handleLogout}>
                 Sign Out
               </Link>

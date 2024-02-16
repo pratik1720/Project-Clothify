@@ -30,7 +30,7 @@ const AllotedCoupons =()=>{
         <div className="deal"></div>
       
         
-        <div className="man "> <img src={CouponPointing} alt="" style={{border:"2px solid black"}} /></div>
+        <div className="man "> <img src={CouponPointing} alt=""  /></div>
    <div className="order-page">
    <h2 id="d">Allocated Coupons</h2>
  
