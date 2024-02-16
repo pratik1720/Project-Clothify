@@ -6,4 +6,6 @@ public interface OrderService {
 
 	Order add(Order order);
 
+	int Update(Order order);
+
 }

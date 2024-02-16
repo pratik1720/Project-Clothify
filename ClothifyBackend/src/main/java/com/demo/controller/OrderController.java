@@ -27,4 +27,15 @@ public class OrderController {
 		   }
 		   return ResponseEntity.noContent().build();
 	   }
+	@PostMapping("/acceptPickUpOrder")
+	   public ResponseEntity<?> acceptPickUp(@RequestBody Order order){
+		   
+		        int order1=service.Update(order);
+		   if(order1>0) {
+			  
+			  return ResponseEntity.ok(order1);
+		   }
+		   return ResponseEntity.noContent().build();
+	   }
+	
 }

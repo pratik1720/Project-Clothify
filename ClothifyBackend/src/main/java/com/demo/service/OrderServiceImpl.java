@@ -9,11 +9,16 @@ import com.demo.model.Order;
 @Service
 public class OrderServiceImpl implements OrderService {
 	@Autowired
-	private OrderDao dao;
+	private OrderDao orderdao;
 	@Override
 	public Order add(Order order) {
 		// TODO Auto-generated method stub
-		return dao.save(order);
+		return orderdao.save(order);
+	}
+	@Override
+	public int Update(Order order) {
+		// TODO Auto-generated method stub
+		return orderdao.SetPickUp(order.getOid(),order.getPid().getPid());
 	}
 
 }
