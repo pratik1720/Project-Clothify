@@ -10,28 +10,31 @@ import '../Css/Footer.css';
 const Footer =()=>{
   return(
     <>
-      <footer className="footer"style={{height:"170px"}} >
+      <footer className="footer"style={{height:"140px"}} >
       <div className="footer-content">
         <div className="footer-logo">
-          <img src={clothifyLogo} alt="Clothify Logo" className="logo" width={220} height={70} />
+          <img src={clothifyLogo} alt="Clothify Logo" className="logo" width={280} height={70} />
           
         </div>
         <center>This site is copyright-protected and is property of Clothify</center>
-        <div className="footer-social">
+        <div className="footer-social" style={{display:"flex",flexDirection:"row"}}>
             <a href="https://www.github.com/" target="_blank" rel="noopener noreferrer">
-             <FontAwesomeIcon icon={faYoutube} /> 
+             <FontAwesomeIcon icon={faYoutube}color="black" /> 
           </a>
           <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
-             <FontAwesomeIcon icon={faInstagram} /> 
+             <FontAwesomeIcon icon={faInstagram} color="black"/> 
           </a>
           <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-             <FontAwesomeIcon icon={faFacebook} /> 
+             <FontAwesomeIcon icon={faFacebook}color="black" /> 
           </a>
+          <div className="footer-bottom">
+        
+      </div>
+      
         </div>
       </div>
-      <div className="footer-bottom">
-        <p>&copy; Clothify Pvt. Ltd.</p>
-      </div>
+      <p>&copy; Clothify Pvt. Ltd.</p>
+      
     </footer>
     </>
   )

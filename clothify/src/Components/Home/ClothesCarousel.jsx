@@ -1,21 +1,19 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import image1 from '../../Images/handm.png';  
-import image2 from '../../Images/Zara.avif';
-import image3 from '../../Images/West.jpg';
-import image4 from '../../Images/Pantaloons.png';
-import image5 from '../../Images/Max.png';
-import image6 from '../../Images/Levi.png';
-import image7 from '../../Images/Ucbb.png';
+import image1 from '../../Images/Clothes5.png';  
+import image2 from '../../Images/clothes1.png';
+import image3 from '../../Images/Clothes4.png';
+import image4 from '../../Images/Clothes2.png';
+import image5 from '../../Images/Clothes3.png';
  import '../../Css/Home/ImageCaresoul.css';
 import { faAlignCenter } from '@fortawesome/free-solid-svg-icons';
 
-const ImageCarousel =()=>{
+const ClothesCarousel =()=>{
     const images=[
         {src:image1},
     {src:image2},
-    {src:image3},{src:image4},{src:image5},{src:image6},{src:image7}
+    {src:image3},{src:image4},{src:image5}
 ]
 return (
     <div>
@@ -42,4 +40,4 @@ return (
     </div>
 )
 }
-export default ImageCarousel;
+export default ClothesCarousel;

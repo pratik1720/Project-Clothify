@@ -19,7 +19,7 @@ export default  function Navbar ()
     <nav className="navbar">
     <div className="nav-left">
      
-      <img src={clothifyLogo} alt="Clothify Logo" className="logo" width={350} height={150} />
+      <img src={clothifyLogo} alt="Clothify Logo" className="logo" width={450} height={150} />
     </div>
     <ul className="nav-list">
     <li><Link to="/">Home</Link></li>

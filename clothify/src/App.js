@@ -6,7 +6,7 @@ import ForgetPass from './Components/ForgetPass';
 import Home from './Components/Home/Home';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
-import Aboutus from './Components/AboutUs';
+import About from './Components/Home/About';
 import Order from './Components/Order';
 import Contact from './Components/Contact';
 import UserProfile from './Components/UserProfile';
@@ -34,7 +34,7 @@ function App() {
     <Route path="/registration" element={<Register/>} />
     <Route path="/forgetpassword" element={<ForgetPass/>} />
     <Route path="/" element={<Home/>} />
-    <Route path="/about" element={<Aboutus/>} />
+    <Route path="/about" element={<About/>} />
     <Route path="/order" element={<Order/>} />
     <Route path="/contact" element={<Contact/>} />
     <Route path="/profile" element={<UserProfile/>} />
