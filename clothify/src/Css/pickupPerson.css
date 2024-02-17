@@ -1,39 +1,52 @@
 #d{
-    color:  #0ab2be;
+    color: rgb(249, 36, 36);
     text-align: left;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* margin-left: 30px; */
 }
-.order-page {
+.pickup-page {
+    
     text-align: center;
     padding: 20px;
     height: 500px;
     border: 2px solid  black;
 }
 
-.college-heading {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
+.pickup{
+    margin-left: 30px;
 }
 
-.order-table {
-    width: 40%;
+.pickup-table {
+    
+    width: 10%;
     margin: 0 0;
     height: 50%;
     /* border-collapse: collapse; */
     border: 2px solid black;
 }
 
-.order-table th,
-.order-table td {
+.pickup-table th,
+.pickup-table td {
     border: 1px solid #ccc;
     padding: 10px;
 }
 
-.order-table th {
+.pickup-table th {
     background-color: #f5f5f5;
     font-weight: bold;
 }
 
-.order-table td {
+.pickup-table td {
     text-align: center;
+}
+
+.navbar-toggler{
+    transition-duration: 0.4s;
+    background-color:grey;
+}
+
+.navbar-toggler:hover{
+    background-color: #f83636; 
+  color:white;
 }

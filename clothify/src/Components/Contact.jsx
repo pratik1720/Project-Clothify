@@ -3,11 +3,11 @@ const Contact=()=>{
 
     return (
       <div className="contact">
-        <img src="./contact.svg"/>
+        <img src="./contact.svg" style={{width:"500px",marginLeft:"50px"}}/>
         <div className="container mt-5" style={{width:"600px" ,margin:"auto"}}>
         <div className="row justify-content-center">
           <div className="col-md-6">
-            <div className="card">
+            <div className="card" style={{width:"400px"}}>
               <div className="card-body">
                 <h2 align="center" className="card-title">Contact Us</h2>
                 <br></br>

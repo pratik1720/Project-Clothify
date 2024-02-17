@@ -22,8 +22,8 @@ export default function SingOut() {
     ) : (
       <>
         <p>Are you really sure you want to sign out?</p>
-        <button onClick={handleSignOut}>Confirm Sign Out</button>
-        <button onClick={() => setShowConfirmation(false)}>Cancel</button>
+        <button id="btn" onClick={handleSignOut}>Confirm Sign Out</button>
+        <button id="btn" onClick={() => setShowConfirmation(false)}>Cancel</button>
       </>
     )}
     </div>

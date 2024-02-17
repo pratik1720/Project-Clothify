@@ -1,5 +1,5 @@
 .signout-page{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     height: 490px; 
     padding: "10px";
 }
@@ -8,10 +8,11 @@
 }
 .box{
     border: 2px solid black;
-    width: 300px;
+    width: 450px;
+    padding: 40px;
    
    margin :auto auto;
 }
 #btn{
-    margin: 5px 5px;
+    margin: 10px 10px;
 }

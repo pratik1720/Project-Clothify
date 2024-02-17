@@ -51,20 +51,20 @@ const PickUpPerson =()=>{
       navigate("/coupons",{state:data})
     }
   return (
-    <div  className="ordertable"> 
+    <div  className="pickup"> 
              <h2 id="d">Authorised PickUpPerson</h2>
-        <div className="order-page">
+        <div className="pick-page">
       <br></br>
-      <table className="order-table">
+      <table className="pickup-table">
         <thead>
           <tr>
-            <th>Uid</th>
+           
             <th>UserName</th>
             <th>Name</th>
             <th>Email</th>
             <th>Phone No</th>
             <th>Address</th>
-            <th>Oid</th>
+            
             <th>NoOfItems</th>
             <th>Date</th>
             <th>Description</th>
@@ -77,33 +77,26 @@ const PickUpPerson =()=>{
             
              
             <tr key={user.uid}>
-              <td>{user[0]}</td>
+             
               <td>{user[1]}</td>
               <td>{user[2]}</td>
               <td>{user[3]}</td>
               <td>{user[4]}</td>
               <td>{user[5]}</td>
-              <td>{user[6]}</td>
+              
               <td>{user[7]}</td>
               <td>{user[8]}</td>
               <td>{user[9]}</td>
               
-              <td>     <button
+              <td>     
+          <button 
           className="navbar-toggler" style={{padding:"10px",marginLeft:"50px",marginRight:"20px"}}
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"  onClick={()=>{acceptOrder(user[0])}}>Accept order</button></td>
-              <td>     <button
+          type="button" onClick={()=>{acceptOrder(user[0])}}>Accept order</button></td>
+              <td>
+                   
+                  <button
           className="navbar-toggler" style={{padding:"10px",marginLeft:"50px",marginRight:"20px"}}
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"  onClick={()=>{AllotedCoupons(user[0])}}>Give Coupons</button></td>
+            onClick={()=>{AllotedCoupons(user[0])}}>Give Coupons</button></td>
              
             </tr>
             
