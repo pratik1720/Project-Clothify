@@ -11,23 +11,14 @@ export default function UserProfile(){
     return (
 
         <div className="profile">
-<<<<<<< HEAD
             <div >
        
-=======
-            <div style={{display:"flex",justifyContent:"center"}} >
-        {/* Profile icon in the navbar */}
->>>>>>> b45763672842b9eeaee7a54459db36ae3b2d131e
         <button onClick={toggleSidebar}>
           {isSidebarOpen ? 'Close Profile' : 'Open Profile'}
         </button>
       </div>
 
-<<<<<<< HEAD
     
-=======
-
->>>>>>> b45763672842b9eeaee7a54459db36ae3b2d131e
       {isSidebarOpen && (
         <div className="profile-sidebar" >
           <h2 style={{fontFamily:"Helvetica",fontSize:"40px",color:"red"}}>User Profile</h2>

@@ -48,12 +48,8 @@ const PickUpPersonLogin=()=>{
     };
    
   return(
-<<<<<<< HEAD
     <div className="container mt-5 " style={{width:"800px" ,margin:"auto" ,marginTop:"20px",marginBottom:"20px",padding:"10px",display:"flex",justifyContent:"space-around",alignItems:"center"}} >
        <img  src="./PickUpLogin.svg" width="700px" height="500px"/>
-=======
-    <div className="container mt-5 " style={{width:"600px" ,margin:"auto" ,marginTop:"20px",marginBottom:"20px", display:"flex", alignItems:"center"}} >
->>>>>>> b45763672842b9eeaee7a54459db36ae3b2d131e
     <div className="row justify-content-center ">
       <div className="col-md-6">
      
