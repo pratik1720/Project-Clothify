@@ -18,5 +18,6 @@ public interface OrderDao extends JpaRepository<Order, Integer>{
     @Query(value="update pickuporder  set pid=:pid where oid=:oid",nativeQuery = true)
 
 	int SetPickUp(int oid, int pid);
+	
 
 }

@@ -20,5 +20,11 @@ public class OrderServiceImpl implements OrderService {
 		// TODO Auto-generated method stub
 		return orderdao.SetPickUp(order.getOid(),order.getPid().getPid());
 	}
+	@Override
+	public void complete(Order order) {
+		// TODO Auto-generated method stub
+		orderdao.deleteById(order.getOid());
+		
+	}
 
 }
