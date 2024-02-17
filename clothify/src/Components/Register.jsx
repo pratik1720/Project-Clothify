@@ -38,7 +38,7 @@ function handleRegistration(e){
   }
  };
     return(
-        <div className="container mt-5" style={{width:"600px" ,margin:"auto"}}>
+        <div className="container mt-5" style={{width:"900px" ,margin:"auto"}}>
         <div className="row justify-content-center">
           <div className="col-md-6">
             <div className="card">
@@ -126,6 +126,7 @@ function handleRegistration(e){
                       type="submit"
                       className="btn btn-danger btn-lg"
                      onClick={handleRegistration}
+                     style={{backgroundColor:"red"}}
                     >
                       Register
                     </button>

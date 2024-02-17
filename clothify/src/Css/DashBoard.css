@@ -1,38 +1,42 @@
-#d{
-    color:  #0ab2be;
+#A{
+    color:  #f41616;
     text-align: left;
+    margin-left: 35px;
+    margin-top: 10px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
 }
-.order-page {
+
+/* /* #a{
+    color:  #f41616;
+    text-align: left;
+} */
+/* .order-page {
     text-align: center;
     padding: 20px;
     height: 100px;
-}
+} */
 
-.college-heading {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
 
-.order-table {
+.dashboard{
     width: 40%;
     margin: 0 0;
     height: 100%;
-    /* border-collapse: collapse; */
-    border: 1px solid #ccc;
+    margin-left: 30px;
 }
+    /* border-collapse: collapse; }*/ 
 
-.order-table th,
-.order-table td {
+.dashboard th,
+.dashboard td {
     border: 1px solid #ccc;
     padding: 10px;
-}
+} */ 
 
-.order-table th {
+.dashboard th {
     background-color: #f5f5f5;
     font-weight: bold;
-}
+} */
 
-.order-table td {
+ .dashboard td {
     text-align: center;
-}
+}  

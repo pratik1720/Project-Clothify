@@ -1,7 +1,11 @@
 .profile{
     border: 2px solid black;
-    width: 300px;
-     height: 300px;
+    width: 1200px;
+     height: 620px;
+     padding: 10px;
+     font-size: 20px;
+    
     align-items: center;
-   margin: auto auto;
+   /* margin: auto,40px; */
+   margin-left: 30px;
 }

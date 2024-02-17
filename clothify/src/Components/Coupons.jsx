@@ -51,7 +51,7 @@ const Coupons =()=>{
         }
        };
     return(
-        <div className="container mt-5" style={{width:"600px" ,margin:"auto"}}>
+        <div className="container mt-5" style={{width:"900px" ,margin:"auto"}}>
         <div className="row justify-content-center">
           <div className="col-md-6">
             <div className="card">
@@ -101,8 +101,9 @@ const Coupons =()=>{
   
                   <div className="d-grid">
                     <button
+                    
                       type="submit"
-                      className="btn btn-primary btn-lg"
+                      className="btn btn-danger btn-lg"
                      onClick={giveCoupons}
                     >
                       Allocate

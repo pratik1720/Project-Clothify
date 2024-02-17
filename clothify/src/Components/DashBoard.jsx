@@ -23,10 +23,10 @@ fetchdata()
    },[])
     return(
           <div> 
-             <h2 id="d">Admin Dashboard</h2>
-        <div className="order-page">
+             <h2 id="A">Admin Dashboard</h2>
+      
       <br></br>
-      <table className="order-table">
+      <table className="dashboard">
         <thead>
           <tr>
             <th>Uid</th>
@@ -57,7 +57,7 @@ fetchdata()
               <td>{user[7]}</td>
               <td>{user[8]}</td>
               <td>{user[9]}</td>
-              <td>{ user[10]}</td>
+              
              
               
             </tr>
@@ -67,7 +67,7 @@ fetchdata()
         </tbody>
       </table>
         </div>
-        </div>
+       
     )
 }
 export default DashBoard;

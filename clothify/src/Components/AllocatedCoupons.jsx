@@ -25,18 +25,13 @@ const AllotedCoupons =()=>{
      
     },[])
     return(
-        
-        <div className="AllocatedMain d-flex justify-content-center"> 
-        <img src="./AllocatedDeals.png" style={{width:"500px", height:"500px"}} />
       
-        
-        {/* <div className="man "> <img src={CouponPointing} alt=""  /></div> */}
-   <div className="order-page">
-   <h2 id="d">Allocated Coupons</h2>
+   <div className="allocatedcoupon-page">
+   <h4 id="a">Allocated Coupons</h4>
  
- 
+ <br></br>
 
- <table className="order-table">
+ <table className="allocatedcoupon-table">
    <thead>
      <tr>
        <th>UserName</th>
@@ -59,7 +54,7 @@ const AllotedCoupons =()=>{
      </tbody>
  </table>
    </div>
-   </div>
+   
     )
 
 }
