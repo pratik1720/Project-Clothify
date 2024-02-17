@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import axios from 'axios';
-import { ToastContainer } from 'react-toastify';
+
 import "react-toastify/dist/ReactToastify.css";
 import {URL} from "../config";
 
@@ -30,12 +30,12 @@ const PickUpPersonLogin=()=>{
                console.log(response.data)
                const{pid,username ,name ,email,phone_no,password,address,isActive}=response.data;
                if(response.status==200){
+                 toast.success("pickup person login successfully");
                  sessionStorage['username']=username;
                  sessionStorage['pid']=pid;
                  sessionStorage['email']=email;
                  sessionStorage['isActive']=isActive;
                  sessionStorage['loginStatus']=1;
-                 toast.success("welcome to clothify...");
                 
                  navigate("/pickupPerson")
                 
@@ -48,7 +48,8 @@ const PickUpPersonLogin=()=>{
     };
    
   return(
-    <div className="container mt-5 " style={{width:"600px" ,margin:"auto" ,marginTop:"20px",marginBottom:"20px"}} >
+    <div className="container mt-5 " style={{width:"800px" ,margin:"auto" ,marginTop:"20px",marginBottom:"20px",padding:"10px",display:"flex",justifyContent:"space-around",alignItems:"center"}} >
+       <img  src="./PickUpLogin.svg" width="700px" height="500px"/>
     <div className="row justify-content-center ">
       <div className="col-md-6">
      

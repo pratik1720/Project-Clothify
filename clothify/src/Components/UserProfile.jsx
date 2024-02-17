@@ -4,19 +4,19 @@ export default function UserProfile(){
     const[isSidebarOpen,setisSidebarOpen]=useState(false)
     
     const toggleSidebar=()=>{
-        setisSidebarOpen(!isSidebarOpen);
+        setisSidebarOpen(!isSidebarOpen)
     }
     return (
 
         <div className="profile">
             <div >
-        {/* Profile icon in the navbar */}
+       
         <button onClick={toggleSidebar}>
           {isSidebarOpen ? 'Close Profile' : 'Open Profile'}
         </button>
       </div>
 
-      Profile sidebar
+    
       {isSidebarOpen && (
         <div className="profile-sidebar" >
           <h2>Profile</h2>
@@ -31,7 +31,7 @@ export default function UserProfile(){
               </div>
          
           {/* <button onClick={toggleSidebar}>Close</button> */}
-        </div> )};
+        </div> )}
         
         </div>
     

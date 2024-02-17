@@ -1,9 +1,8 @@
 import React, { useState } from "react"
 import { useNavigate } from "react-router-dom";
-import { toast } from 'react-toastify';
+import { toast,Bounce } from 'react-toastify';
 import axios from 'axios';
-import { ToastContainer } from 'react-toastify';
-import "react-toastify/dist/ReactToastify.css";
+
 import {URL} from "../config";
 const UserLogin= ()=>{
    const[username,setUserName]=useState("");
@@ -27,6 +26,18 @@ const UserLogin= ()=>{
               console.log(response.data)
               const{uid,username ,name ,email,phone_no,password,address,role,pid}=response.data;
               if(response.status==200){
+
+                toast.success(' login successfully!', {
+                  position: "top-middle",
+                  autoClose: 3000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                  theme: "colored",
+                  transition: Bounce,
+                  });
                 sessionStorage['username']=username;
                 sessionStorage['uid']=uid;
                 sessionStorage['email']=email;

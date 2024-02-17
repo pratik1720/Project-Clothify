@@ -22,6 +22,7 @@ import AllotedCoupons from './Components/AllocatedCoupons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PickUpPersonfeedback from './Components/PickUpPersonfeedback';
 import UserLogin from './Components/UserLogin';
+import { Bounce, ToastContainer } from 'react-toastify';
 
 
 function App() {
@@ -48,8 +49,22 @@ function App() {
     <Route path="/PickUpPersonfeedback" element={<PickUpPersonfeedback/>}  />
   </Routes>
   <Footer></Footer>
+  
   </BrowserRouter>
-    </div>);
+<ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="colored"
+
+/>
+</div>);
 }
 
 export default App;

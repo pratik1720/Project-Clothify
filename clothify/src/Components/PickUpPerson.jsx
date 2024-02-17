@@ -3,6 +3,7 @@ import axios from 'axios';
 import {URL} from "../config"
 import '../Css/pickupPerson.css';
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 const PickUpPerson =()=>{
     const[Details,setuserDetails]=useState([]);
     const  navigate =useNavigate();
@@ -21,7 +22,7 @@ const PickUpPerson =()=>{
      
     },[])
 
-    const acceptOrder=(user)=>{
+    const acceptOrder=async(user)=>{
        try {
        const user1=Details.filter(u=>(u[0]==user))
        console.log(user1)
@@ -30,11 +31,12 @@ const PickUpPerson =()=>{
        let pid= parseInt(sessionStorage["pid"])
          console.log(oid ,pid)
          const body ={oid,pid:{pid}}
-        axios.post(`${URL}/acceptPickUpOrder`, body).then((response)=>{
+         axios.post(`${URL}/acceptPickUpOrder`, body).then((response)=>{
           console.log(response.data)
+          
           }).catch()
        })
-       
+       toast.success(" order is accepted")
         
        } catch (error) {
         

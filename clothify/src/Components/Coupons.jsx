@@ -41,6 +41,7 @@ const Coupons =()=>{
                   } catch (e) {
                     
                   }
+                  toast.success("coupon")
                   navigate("/pickupPerson" )
                 }).catch() 
               } catch (e) {

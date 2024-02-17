@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { URL } from '../config';
 import { useNavigate } from 'react-router';
-import { toast } from 'react-toastify';
-import { ToastContainer } from 'react-toastify';
+import { toast,Bounce } from 'react-toastify';
+
 import "../Css/Order.css";
 const Order=()=>{
     const [pickupDate, setpickupDate] = useState(new Date());
@@ -24,8 +24,10 @@ const Order=()=>{
      console.log(pickupDate,pickupDescription,noOfItems,uid)
         const body={pickupDate,pickupDescription,noOfItems,uid}
         try {
-          axios.post(`${URL}/order`,body).then((response)=>{
+          await axios.post(`${URL}/order`,body).then((response)=>{
             console.log(response.data)
+            alert("order is clicked")
+            toast.success("order is placed successfully")
           }).catch() 
         } catch (e) {
           

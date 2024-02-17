@@ -26,7 +26,7 @@ function handleRegistration(e){
   }
   else{
     console.log(Name,phone,emailId)
-        const body={username,emailId,Name,phone,password,address}
+        const body={username,email:emailId,name:Name,phone_no:phone,password,address}
         try {
           axios.post(`${URL}/register`,body).then((response)=>{
             console.log(response.data)
@@ -43,7 +43,7 @@ function handleRegistration(e){
           <div className="col-md-6">
             <div className="card">
               <div className="card-body">
-                <h2 align="center" className="card-title">Register</h2>
+                <h2 align="center" className="card-title" >Register</h2>
                 <br></br>
                 <form>
                   <div className="mb-3">
@@ -124,7 +124,7 @@ function handleRegistration(e){
                   <div className="d-grid">
                     <button
                       type="submit"
-                      className="btn btn-primary btn-lg"
+                      className="btn btn-danger btn-lg"
                      onClick={handleRegistration}
                     >
                       Register
