@@ -21,6 +21,7 @@ const PickUpPerson =()=>{
  fetchdata()
      
     },[])
+    
 
     const acceptOrder=async(user)=>{
        try {
@@ -53,7 +54,7 @@ const PickUpPerson =()=>{
       navigate("/coupons",{state:data})
     }
   return (
-    <div  className="pickup"> 
+    <div  className="pickup" style={{height:"620px"}}> 
              <h2 id="d">Authorised PickUpPerson</h2>
         <div className="pick-page">
       <br></br>

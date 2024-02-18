@@ -18,13 +18,13 @@ const Footer =()=>{
         </div>
         <center>This site is copyright-protected and is property of Clothify</center>
         <div className="footer-social" style={{display:"flex",flexDirection:"row"}}>
-            <a href="https://www.github.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
              <FontAwesomeIcon icon={faYoutube}color="black" /> 
           </a>
-          <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
              <FontAwesomeIcon icon={faInstagram} color="black"/> 
           </a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
              <FontAwesomeIcon icon={faFacebook}color="black" /> 
           </a>
           <div className="footer-bottom">

@@ -26,7 +26,7 @@ return (
   showThumbs={false}
   infiniteLoop={true}
   autoPlay={true}
-  interval={3000}
+  interval={2000}
   transitionTime={500}
   showIndicators={false}
 >

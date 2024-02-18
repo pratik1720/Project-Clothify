@@ -24,6 +24,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import PickUpPersonfeedback from './Components/PickUpPersonfeedback';
 import UserLogin from './Components/UserLogin';
 import { Bounce, ToastContainer } from 'react-toastify';
+import AddPickup from './Components/AddPickUp';
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
     <Route path="/coupons" element={<Coupons/>}  />
     <Route path="/allocatedCoupons" element={<AllotedCoupons/>}  />
     <Route path="/PickUpPersonfeedback" element={<PickUpPersonfeedback/>}  />
+    <Route path="/addPickup" element={<AddPickup/>}  />
   </Routes>
   <Footer></Footer>
   

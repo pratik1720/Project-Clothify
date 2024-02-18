@@ -1,6 +1,15 @@
+import { useState } from "react";
+import { toast,Bounce } from 'react-toastify';
 import "../Css/Contact.css";
 const Contact=()=>{
-
+      const[Name,setName]=useState("");
+      const[Email,setEmail]=useState("");
+      const[Message,setMessage]=useState("");
+   const handlecontact=(e)=>{
+    e.preventDefault();
+     console.log(Name,Email,Message)
+     toast.success("Will Get In Touch With You")
+   }
     return (
       <div className="contact">
         <img src="./contact.svg" style={{width:"500px",marginLeft:"50px"}}/>
@@ -11,7 +20,7 @@ const Contact=()=>{
               <div className="card-body">
                 <h2 align="center" className="card-title">Contact Us</h2>
                 <br></br>
-                <form>
+                <form onSubmit={handlecontact}>
                  
                   <div className="mb-3">
                     <label htmlFor="name" className="form-label"><b>Name:</b></label>
@@ -20,8 +29,8 @@ const Contact=()=>{
                       className="form-control"
                       id="name"
                       placeholder="abc"
-                    //  value={Name}
-                    //  onChange={(e) => setName(e.target.value)}
+                     value={Name}
+                     onChange={(e) => setName(e.target.value)}
                       required
                     />
                    
@@ -33,8 +42,8 @@ const Contact=()=>{
                       className="form-control"
                       id="emailId"
                       placeholder="abc@gmail.com"
-                    //  value={emailId}
-                    //   onChange={(e) => setEmail(e.target.value)}
+                      value={Email}
+                      onChange={(e) => setEmail(e.target.value)}
                       required
                     />
                   </div>
@@ -45,8 +54,8 @@ const Contact=()=>{
                       className="form-control"
                       id="username"
                       placeholder="Enter Message"
-                    //   value={username}
-                    //  onChange={(e) => setUsername(e.target.value)}
+                     value={Message}
+                     onChange={(e) => setMessage(e.target.value)}
                       required
                     />
                   </div>
@@ -55,7 +64,7 @@ const Contact=()=>{
                     <button
                       type="submit"
                     //   className="btn btn-primary btn-lg"
-                    //  onClick={handleRegistration}
+                    
                     >
                       Submit
                     </button>
