@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { useNavigate } from "react-router-dom";
-import { toast } from 'react-toastify';
+import { toast,Bounce } from 'react-toastify';
 import axios from 'axios';
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
@@ -9,22 +9,33 @@ export default function ForgetPass(){
     const[username,setUserName]=useState("");
     const[password,setPassword]=useState("");
     const[emailId,setEmail]=useState("");
-
+    const navigate=useNavigate()
     const handleResetPassword=(e)=>{
         e.preventDefault();
         if(username.length==0){
             console.log("ynrn");
-            toast.warning("egwrh")
+            toast.warning("Please Enter Your Username")
         }
+        else if(emailId.length==0){
+          toast.warning("Please Enter Your EmailId")
+      }
         else if(password.length==0){
-            toast.warning("egwrh")
+            toast.warning("Please Enter Your Password")
         }
         else{
          
-              const body={username,emailId,password}
+              const body={username,email:emailId,password}
               try {
                 axios.post(`${URL}/reset`,body).then((response)=>{
-                  console.log(response.data)
+                  if(response.status==204){
+                    toast.warning(" Invalid Credentials")
+                  }
+                  else if(response.status==200){
+                    console.log(response.data)
+                    toast.success("Successfully Change the Password")
+                    navigate("/userlogin")
+                  }
+                  
                 }).catch() 
               } catch (e) {
                 
@@ -76,7 +87,7 @@ export default function ForgetPass(){
 
                <br></br>
               </div>
-             <center> <button className="btn btn-primary" onClick={handleResetPassword}>Reset Password</button></center>
+             <center> <button className="btn btn-danger" onClick={handleResetPassword}>Reset Password</button></center>
               
             </div>
           </div>

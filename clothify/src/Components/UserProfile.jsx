@@ -27,14 +27,14 @@ export default function UserProfile(){
           <p>Role: <b>{ sessionStorage['role']  }</b></p>
           <p>User Name: <b>{ sessionStorage['username']  }</b></p>
           
-          
-              <AllotedCoupons></AllotedCoupons>
-
-              <div className="text-left mt-3" style={{alignItems:"center"}}>
+          <div className="text-left mt-3" style={{alignItems:"center"}}>
                 <a href="/changePassword" className="forgot-password-link" alignItems="center">
                   Change Password?
                 </a>
               </div>
+              <AllotedCoupons></AllotedCoupons>
+
+              
          
           {/* <button onClick={toggleSidebar}>Close</button> */}
         </div> )}

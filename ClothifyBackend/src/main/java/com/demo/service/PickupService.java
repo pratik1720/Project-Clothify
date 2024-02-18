@@ -10,4 +10,6 @@ public interface PickupService {
 
 	List<Pickup> getAllPickUpPersons();
 
+	Pickup add(Pickup pickup);
+
 }

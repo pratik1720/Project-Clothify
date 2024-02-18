@@ -1,14 +1,17 @@
 import { useState } from "react";
 import { toast,Bounce } from 'react-toastify';
 import "../Css/Contact.css";
+import { useNavigate } from "react-router-dom";
 const Contact=()=>{
       const[Name,setName]=useState("");
       const[Email,setEmail]=useState("");
       const[Message,setMessage]=useState("");
+      const navigate=useNavigate()
    const handlecontact=(e)=>{
     e.preventDefault();
      console.log(Name,Email,Message)
      toast.success("Will Get In Touch With You")
+   navigate("/")
    }
     return (
       <div className="contact">

@@ -12,7 +12,7 @@ export default function AddPickup(){
     const[phone,setPhone]=useState("")
     const[password,setPassword]=useState("")
     const[address,setAddress]=useState("")
-    
+     const navigate=useNavigate();
   function handleRegistration(e){
     e.preventDefault();
     if(username.length==0){
@@ -28,6 +28,7 @@ export default function AddPickup(){
           try {
             axios.post(`${URL}/addPickup`,body).then((response)=>{
               console.log(response.data)
+               navigate("/dashBoard")
             }).catch() 
           } catch (e) {
             

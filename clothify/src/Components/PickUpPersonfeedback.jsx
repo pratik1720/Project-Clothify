@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import  axios from "axios";
 import {URL} from "../config.js"
+import { toast,Bounce } from 'react-toastify';
 import { useNavigate } from "react-router-dom";
 const PickUpPersonfeedback =()=>{
      const[pickUpPersons,setPickUpPersons]=useState([{}])
       const [FeedBackPickUpPerson, setFeedBackPickUpPerson] = useState('');
       const[pickUpPerson,setPickUpPerson]=useState('');
+      const navigate=useNavigate()
        useEffect(()=>{
         try {
               axios.get(`${URL}/getPickUPPersons`).then((response)=>{
@@ -29,6 +31,8 @@ const PickUpPersonfeedback =()=>{
         const body={feedBackPickUpPerson:FeedBackPickUpPerson,uid:{uid:sessionStorage['uid']},pid:{pid:person[0].pid}}
          try {
            axios.post(`${URL}/PickupPersonFeedback`,body).then((response)=>{
+            toast.success("will get in touch")
+            navigate("/profile")
              console.log(response.data)
              
            }).catch() 

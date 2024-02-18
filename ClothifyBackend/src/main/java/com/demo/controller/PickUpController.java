@@ -39,4 +39,14 @@ public class PickUpController {
 		 return ResponseEntity.ok(pickUplist);
 		 
 	   }
+	 @PostMapping("/addPickup")
+	   public ResponseEntity<?> register(@RequestBody Pickup pickup){
+		   
+		        Pickup pickup1=pickupservice.add(pickup);
+		   if(pickup1!=null) {
+			  
+			  return ResponseEntity.ok(pickup1);
+		   }
+		   return ResponseEntity.noContent().build();
+	   }
 }

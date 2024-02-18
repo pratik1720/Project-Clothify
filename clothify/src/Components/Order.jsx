@@ -26,7 +26,7 @@ const Order=()=>{
         try {
           await axios.post(`${URL}/order`,body).then((response)=>{
             console.log(response.data)
-            alert("order is clicked")
+           
             toast.success("order is placed successfully")
           }).catch() 
         } catch (e) {

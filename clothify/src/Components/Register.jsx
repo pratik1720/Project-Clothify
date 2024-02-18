@@ -14,22 +14,30 @@ const Register =()=>{
   const[phone,setPhone]=useState("")
   const[password,setPassword]=useState("")
   const[address,setAddress]=useState("")
-  
+  const navigate=useNavigate()
 function handleRegistration(e){
   e.preventDefault();
   if(username.length==0){
-      console.log("ynrn");
-      toast.warning("egwrh")
+      
+      toast.warning("Please Enter The UserName")
   }
   else if(password.length==0){
-      toast.warning("egwrh")
+      toast.warning("Please Enter The Password")
   }
+  else if(!emailId.match("@gmail.com")){
+    toast.warning("Email is not in correct format")
+  }
+  else if(emailId.length==0 || Name.length==0 || phone.length==0 || address.length==0 ){
+    toast.warning("Please fill up all Details")
+}
   else{
     console.log(Name,phone,emailId)
         const body={username,email:emailId,name:Name,phone_no:phone,password,address}
         try {
           axios.post(`${URL}/register`,body).then((response)=>{
             console.log(response.data)
+            toast.success("Successfully Register")
+            navigate("/userlogin")
           }).catch() 
         } catch (e) {
           
@@ -92,7 +100,7 @@ function handleRegistration(e){
                       placeholder="4578912345"
                      value={phone}
                      onChange={(e) => setPhone(e.target.value)}
-                      required
+                       required
                     />
                   </div>
                   <div className="mb-3">

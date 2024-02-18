@@ -2,6 +2,7 @@ import { useState } from "react"
 import axios from 'axios';
 import {URL} from "../config.js"
 import { useNavigate } from "react-router-dom";
+import { toast,Bounce } from 'react-toastify';
 export default function ChangePassword(){
     
     const[password,setpasssword]=useState("");
@@ -15,21 +16,28 @@ export default function ChangePassword(){
         if(response.status===200){
             console.log(newpassword)
            const uid=response.data.uid
-
+             
             const body1={password:newpassword,uid}
             axios.post(`${URL}/change`,body1).then((response1)=>{
                 console.log(response1.data)
                 const update=response1.data
                 if(update>0){
+                    toast.success("Password is changed sucessfully")
                     navigate("/profile")
+                }
+                else{
+                    toast.warning(" Check Your old Password")
                 }
             });
            
         }
+        else if(response.status==204){
+            toast.warning(" Check Your old Password")
+          }
        })
     }
 return(
-    <div>
+    <div style={{height:"520px" ,display:"flex",justifyContent:"center"}} >
     <div>
          <b>Old Password: </b>
                  <br></br>
@@ -54,7 +62,7 @@ return(
 
                <br></br>
               </div>
-             <center> <button className="btn btn-primary" onClick={ChangePass} >Reset Password</button></center>
+             <center> <button  style={{marginTop:"200px"}}  className="btn btn-danger" onClick={ChangePass} >Reset Password</button></center>
               
     </div>
 )

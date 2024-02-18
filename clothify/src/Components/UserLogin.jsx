@@ -13,11 +13,11 @@ const UserLogin= ()=>{
    const CheckCredential =(e)=>{
     e.preventDefault();
     if(username.length==0){
-        console.log("ynrn");
-        toast.warning("egwrh")
+       
+        toast.warning("Enter the your UserName")
     }
     else if(password.length==0){
-        toast.warning("egwrh")
+      toast.warning("Enter the your Password")
     }
     else{
           const body={username,password}
@@ -27,17 +27,17 @@ const UserLogin= ()=>{
               const{uid,username ,name ,email,phone_no,password,address,role,pid}=response.data;
               if(response.status==200){
 
-                toast.success(' login successfully!', {
-                  position: "top-middle",
-                  autoClose: 3000,
-                  hideProgressBar: false,
-                  closeOnClick: true,
-                  pauseOnHover: true,
-                  draggable: true,
-                  progress: undefined,
-                  theme: "colored",
-                  transition: Bounce,
-                  });
+                // toast.success(' login successfully!', {
+                //   position: "top-middle",
+                //   autoClose: 3000,
+                //   hideProgressBar: false,
+                //   closeOnClick: true,
+                //   pauseOnHover: true,
+                //   draggable: true,
+                //   progress: undefined,
+                //   theme: "colored",
+                //   transition: Bounce,
+                //   });
                 sessionStorage['username']=username;
                 sessionStorage['uid']=uid;
                 sessionStorage['email']=email;
@@ -53,7 +53,8 @@ const UserLogin= ()=>{
                 }
               }
               else{
-                navigate("/login")
+                toast.warning("Wrong Credential");
+                navigate("/userlogin")
               }
             }).catch() 
           } catch (e) {

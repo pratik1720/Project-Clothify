@@ -23,5 +23,10 @@ public class PickupServiceImpl implements PickupService {
 		// TODO Auto-generated method stub
 		return pickupdao.findAll();
 	}
+	@Override
+	public Pickup add(Pickup pickup) {
+		// TODO Auto-generated method stub
+		return pickupdao.save(pickup);
+	}
 
 }
