@@ -23,15 +23,22 @@ const Order=()=>{
      e.preventDefault();
      console.log(pickupDate,pickupDescription,noOfItems,uid)
         const body={pickupDate,pickupDescription,noOfItems,uid}
-        try {
-          await axios.post(`${URL}/order`,body).then((response)=>{
-            console.log(response.data)
-           
-            toast.success("order is placed successfully")
-          }).catch() 
-        } catch (e) {
-          
+        if(sessionStorage['uid']===undefined){
+          toast.warning("Please Login First")
         }
+        
+        else{
+          try {
+            await axios.post(`${URL}/order`,body).then((response)=>{
+              console.log(response.data)
+             
+              toast.success("order is placed successfully")
+            }).catch() 
+          } catch (e) {
+            
+          }
+        }
+       
        
   }
     
@@ -52,7 +59,7 @@ const Order=()=>{
                         //  +"-"+(fromDate.getDate()).toString().padStart(2,0)+"-"}
                          value={pickupDate}
                          onChange={(e) => setpickupDate(e.target.value)}
-                        className={pickupDate.length ? '': 'error'}
+                        className={pickupDate?.length ? '': 'error'}
                          
                         required 
                     />
@@ -64,7 +71,7 @@ const Order=()=>{
                         name="pickupDescription"
                         value={pickupDescription}
                         onChange={(e) => setpickupDescription(e.target.value)}
-                        className={pickupDate.length ? '': 'error'}
+                        className={pickupDate?.length ? '': 'error'}
                         required 
                     />
                     </label>
@@ -73,11 +80,13 @@ const Order=()=>{
                     <label>
                     No of Items:
                     <input
+                    min={0} 
+                  
                         type="number"
                         name="noOfItems"
                         value={noOfItems}
                         onChange={(e) => setnoOfItems(e.target.value)}
-                        className={noOfItems.length ? '': 'error'}
+                        className={noOfItems?.length ? '': 'error'}
                         required 
                     />
                     </label>
@@ -89,9 +98,9 @@ const Order=()=>{
                     <input
                         type="text"
                         name="uid"
-                         value={uid.uid}
+                         value={uid?.uid}
                          onChange={uidHandler}
-                         className={uid.uid.length ? '': 'error'}
+                         className={uid?.uid?.length ? '': 'error'}
                         readOnly
                     />
                     </label>
