@@ -2,13 +2,27 @@ import { useState } from "react";
 import { toast,Bounce } from 'react-toastify';
 import "../Css/Contact.css";
 import { useNavigate } from "react-router-dom";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 const Contact=()=>{
       const[Name,setName]=useState("");
       const[Email,setEmail]=useState("");
       const[Message,setMessage]=useState("");
       const navigate=useNavigate()
+      const form = useRef();
    const handlecontact=(e)=>{
     e.preventDefault();
+    emailjs
+    .sendForm('service_tbldeww', 'template_fvkpwhj', form.current, {
+      publicKey: 'QCTCNbApK-wTCXPis',
+    })
+    .then(
+      () => {
+        console.log('SUCCESS!');
+      },
+      (error) => {
+        console.log('FAILED...', error.text);
+      },);
      console.log(Name,Email,Message)
      toast.success("Will Get In Touch With You")
    navigate("/")
@@ -23,7 +37,7 @@ const Contact=()=>{
               <div className="card-body">
                 <h2 align="center" className="card-title">Contact Us</h2>
                 <br></br>
-                <form onSubmit={handlecontact}>
+                <form  ref={form} onSubmit={handlecontact}>
                  
                   <div className="mb-3">
                     <label htmlFor="name" className="form-label"><b>Name:</b></label>
@@ -44,6 +58,7 @@ const Contact=()=>{
                       type="email"
                       className="form-control"
                       id="emailId"
+                      name="email"
                       placeholder="abc@gmail.com"
                       value={Email}
                       onChange={(e) => setEmail(e.target.value)}
@@ -51,11 +66,12 @@ const Contact=()=>{
                     />
                   </div>
                   <div className="mb-3">
-                    <label htmlFor="username" className="form-label"><b>Message:</b></label>
+                    <label htmlFor="meassage" className="form-label"><b>Message:</b></label>
                     <input
                       type="text"
                       className="form-control"
-                      id="username"
+                      id="message"
+                      name="message"
                       placeholder="Enter Message"
                      value={Message}
                      onChange={(e) => setMessage(e.target.value)}
