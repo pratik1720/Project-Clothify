@@ -22,6 +22,22 @@ const PickUpPerson =()=>{
      
     },[])
     
+    useEffect(()=>{
+     
+      const fetchdata =async()=>{
+      try {
+       const response= await axios.get(`${URL}/userDetail`)
+       console.log(response.data)
+       setuserDetails(response.data)
+      } catch (error) {
+          
+      }
+  }
+  fetchdata()
+      
+     },[Details])
+     
+    
 
     const acceptOrder=async(user)=>{
        try {

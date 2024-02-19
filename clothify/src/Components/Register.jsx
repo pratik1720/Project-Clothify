@@ -30,6 +30,9 @@ function handleRegistration(e){
   else if(emailId.length==0 || Name.length==0 || phone.length==0 || address.length==0 ){
     toast.warning("Please fill up all Details")
 }
+else if((""+phone).length>=10 && (""+phone).length<=13 ){
+  toast.warning("minimun number of digits should be 10 and maximum can be 13")
+}
   else{
     console.log(Name,phone,emailId)
         const body={username,email:emailId,name:Name,phone_no:phone,password,address}
@@ -94,6 +97,8 @@ function handleRegistration(e){
                     <div className="mb-3">
                     <label htmlFor="phone_no" className="form-label"><b>phone_no:</b></label>
                     <input
+                    
+                    
                       type="number"
                       className="form-control"
                       id="phone_no"

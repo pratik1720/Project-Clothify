@@ -10,7 +10,7 @@ const Order=()=>{
     const [pickupDescription, setpickupDescription] = useState('');
     const [noOfItems, setnoOfItems] = useState(0);
     const [uid, setuid] = useState({uid:sessionStorage['uid']});
-
+   const navigate=useNavigate();
     const uidHandler=(e)=>{
         const { name, value } = e.target;
         setuid((prev) => ({
@@ -33,6 +33,7 @@ const Order=()=>{
               console.log(response.data)
              
               toast.success("order is placed successfully")
+               navigate("/")
             }).catch() 
           } catch (e) {
             
@@ -80,7 +81,7 @@ const Order=()=>{
                     <label>
                     No of Items:
                     <input
-                    min={0} 
+                    min={1} 
                   
                         type="number"
                         name="noOfItems"

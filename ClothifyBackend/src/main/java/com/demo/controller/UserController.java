@@ -70,6 +70,7 @@ public class UserController {
    public ResponseEntity<?> checkPass(@RequestBody User user ){
 	   
 	   User user1=service.findByPassword(user.getPassword());
+	   System.out.println(user);
 	   if(user1!=null) {
 		 
 		  return ResponseEntity.ok(user1);

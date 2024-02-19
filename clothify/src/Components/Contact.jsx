@@ -12,7 +12,20 @@ const Contact=()=>{
       const form = useRef();
    const handlecontact=(e)=>{
     e.preventDefault();
-    if(sessionStorage['uid']===undefined){
+    if(Name.length==0){
+      
+      toast.warning("Please Enter The Name")
+  }
+  else if(Email.length==0){
+    toast.warning("Please Enter Your Email")
+  }
+  else if(!Email.match("@gmail.com")){
+    toast.warning("Email is not in correct format")
+  }
+  else if(Message.length==0){
+    toast.warning("Please Enter Your Query")
+}
+    else if(sessionStorage['uid']===undefined){
       toast.warning("Please Login First")
     }
     else{

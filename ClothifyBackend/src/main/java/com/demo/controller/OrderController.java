@@ -23,7 +23,7 @@ public class OrderController {
 	private OrderService service;
 	@PostMapping("/order")
 	   public ResponseEntity<?> acceptorder(@RequestBody Order order){
-		   
+		         
 		        Order order1=service.add(order);
 		   if(order1!=null) {
 			  

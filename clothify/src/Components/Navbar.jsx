@@ -24,7 +24,7 @@ export default  function Navbar ()
     <ul className="nav-list">
     <li><Link to="/">Home</Link></li>
     <li><Link to="/registration">Sign Up</Link></li>
-    <li><Link to="/order">Exchange</Link></li>
+    
       {isLoggedIn ? <b>{ sessionStorage['username']  }</b>:""}
       <li className="dropdown">
         <span className="account-link"><FontAwesomeIcon icon={faUser} className="profile-icon" /></span>

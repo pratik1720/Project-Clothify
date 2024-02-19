@@ -11,30 +11,39 @@ export default function ChangePassword(){
     const ChangePass =(e)=>{
       e.preventDefault();
       const body={password}
-       axios.post(`${URL}/check`,body).then((response)=>{
-        console.log(response.data)
-        if(response.status===200){
-            console.log(newpassword)
-           const uid=response.data.uid
-             
-            const body1={password:newpassword,uid}
-            axios.post(`${URL}/change`,body1).then((response1)=>{
-                console.log(response1.data)
-                const update=response1.data
-                if(update>0){
-                    toast.success("Password is changed sucessfully")
-                    navigate("/profile")
-                }
-                else{
-                    toast.warning(" Check Your old Password")
-                }
-            });
-           
-        }
-        else if(response.status==204){
-            toast.warning(" Check Your old Password")
-          }
-       })
+      if(password.length==0){
+       toast.warning("Please Enter Your Old Password")
+      }
+      else  if(newpassword.length==0){
+        toast.warning("Please Enter Your new Password")
+      }
+      else{
+        axios.post(`${URL}/check`,body).then((response)=>{
+            console.log(response.data)
+            if(response.status===200){
+                console.log(newpassword)
+               const uid=response.data.uid
+                 
+                const body1={password:newpassword,uid}
+                axios.post(`${URL}/change`,body1).then((response1)=>{
+                    console.log(response1.data)
+                    const update=response1.data
+                    if(update>0){
+                        toast.success("Password is changed sucessfully")
+                        navigate("/profile")
+                    }
+                    else{
+                        toast.warning(" Check Your old Password")
+                    }
+                });
+               
+            }
+            else if(response.status==204){
+                toast.warning(" Check Your old Password")
+              }
+           })
+      }
+       
     }
 return(
     <div style={{height:"520px" ,display:"flex",justifyContent:"center"}} >
