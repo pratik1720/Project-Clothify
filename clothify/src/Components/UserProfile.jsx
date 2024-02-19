@@ -2,11 +2,18 @@ import { useState } from "react"
 import '../Css/Profile.css';
 import AllotedCoupons from "./AllocatedCoupons";
 import { cilAlignCenter } from "@coreui/icons";
+import { toast,Bounce } from 'react-toastify';
 export default function UserProfile(){
     const[isSidebarOpen,setisSidebarOpen]=useState(false)
     
     const toggleSidebar=()=>{
+      if(sessionStorage['uid']===undefined){
+        toast.warning("Please Login First")
+      }
+      else{
         setisSidebarOpen(!isSidebarOpen)
+      }
+        
     }
     return (
 

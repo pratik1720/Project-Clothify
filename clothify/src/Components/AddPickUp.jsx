@@ -17,10 +17,10 @@ export default function AddPickup(){
     e.preventDefault();
     if(username.length==0){
         console.log("ynrn");
-        toast.warning("egwrh")
+        toast.warning("Enter the userName")
     }
     else if(password.length==0){
-        toast.warning("egwrh")
+        toast.warning("Plese Enter Password")
     }
     else{
       console.log(Name,phone,emailId)

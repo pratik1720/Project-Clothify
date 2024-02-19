@@ -12,20 +12,26 @@ const Contact=()=>{
       const form = useRef();
    const handlecontact=(e)=>{
     e.preventDefault();
-    emailjs
-    .sendForm('service_tbldeww', 'template_fvkpwhj', form.current, {
-      publicKey: 'QCTCNbApK-wTCXPis',
-    })
-    .then(
-      () => {
-        console.log('SUCCESS!');
-      },
-      (error) => {
-        console.log('FAILED...', error.text);
-      },);
-     console.log(Name,Email,Message)
-     toast.success("Will Get In Touch With You")
-   navigate("/")
+    if(sessionStorage['uid']===undefined){
+      toast.warning("Please Login First")
+    }
+    else{
+      emailjs
+      .sendForm('service_tbldeww', 'template_fvkpwhj', form.current, {
+        publicKey: 'QCTCNbApK-wTCXPis',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },);
+       console.log(Name,Email,Message)
+       toast.success("Will Get In Touch With You")
+     navigate("/")
+    }
+   
    }
     return (
       <div className="contact">

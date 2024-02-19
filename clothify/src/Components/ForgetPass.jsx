@@ -13,7 +13,7 @@ export default function ForgetPass(){
     const handleResetPassword=(e)=>{
         e.preventDefault();
         if(username.length==0){
-            console.log("ynrn");
+           
             toast.warning("Please Enter Your Username")
         }
         else if(emailId.length==0){
@@ -21,6 +21,9 @@ export default function ForgetPass(){
       }
         else if(password.length==0){
             toast.warning("Please Enter Your Password")
+        }
+        else if(!emailId.match("@gmail.com")){
+          toast.warning("Email is not in correct format")
         }
         else{
          

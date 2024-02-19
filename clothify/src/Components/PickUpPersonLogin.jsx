@@ -18,10 +18,10 @@ const PickUpPersonLogin=()=>{
     e.preventDefault();
      if(username.length==0){
          console.log("ynrn");
-         toast.warning("egwrh")
+         toast.warning("Please Enter UserName")
      }
      else if(password.length==0){
-         toast.warning("egwrh")
+         toast.warning("Please Enter Password")
      }
      else{
            const body={username,password}
@@ -39,7 +39,10 @@ const PickUpPersonLogin=()=>{
                 
                  navigate("/pickupPerson")
                 
-           }}).catch() 
+           }
+          else{
+            toast.warning("Wrong Credential")
+          }}).catch() 
            } catch (e) {
              
            }

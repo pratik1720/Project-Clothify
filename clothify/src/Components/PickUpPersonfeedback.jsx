@@ -29,16 +29,23 @@ const PickUpPersonfeedback =()=>{
       console.log(person)
 
         const body={feedBackPickUpPerson:FeedBackPickUpPerson,uid:{uid:sessionStorage['uid']},pid:{pid:person[0].pid}}
-         try {
-           axios.post(`${URL}/PickupPersonFeedback`,body).then((response)=>{
-            toast.success("will get in touch")
-            navigate("/profile")
-             console.log(response.data)
-             
-           }).catch() 
-         } catch (e) {
-           
-         }
+        if(sessionStorage['uid']===undefined){
+          toast.warning("Please Login First")
+        }
+        
+        else{
+          try {
+            axios.post(`${URL}/PickupPersonFeedback`,body).then((response)=>{
+             toast.success("will get in touch")
+             navigate("/profile")
+              console.log(response.data)
+              
+            }).catch() 
+          } catch (e) {
+            
+          }
+        }
+        
         
    }
     
