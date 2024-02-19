@@ -4,20 +4,22 @@ import clothifyLogo from '../Images/Clogo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faFacebook, faTwitter, faInstagram, faGithub, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
 import '../Css/Footer.css';
 const Footer =()=>{
   return(
     <>
-      <footer className="footer"style={{height:"140px"}} >
-      <div className="footer-content">
-        <div className="footer-logo">
-          <img src={clothifyLogo} alt="Clothify Logo" className="logo" width={280} height={70} />
+      <div className="footer" style={{height:"160px",bottom:0}} >
+      
+        <div className="d-flex justify-content-around">
           
-        </div>
-        <center>This site is copyright-protected and is property of Clothify</center>
-        <div className="footer-social" style={{display:"flex",flexDirection:"row"}}>
+          <img src={clothifyLogo} alt="Clothify Logo" className="logo" width={300} height={80} /> 
+          <div>
+          <p>This site is copyright-protected and is property of Clothify</p>
+          <p>&copy; Clothify Pvt. Ltd.</p>
+
+          </div>
+         
+        <div className="footer-social" style={{display:"flex",flexDirection:"row",marginBlockEnd:"100px", width:"50px", marginRight:"50px"}}>
             <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
              <FontAwesomeIcon icon={faYoutube}color="black" /> 
           </a>
@@ -27,15 +29,17 @@ const Footer =()=>{
           <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
              <FontAwesomeIcon icon={faFacebook}color="black" /> 
           </a>
-          <div className="footer-bottom">
-        
-      </div>
-      
         </div>
-      </div>
-      <p>&copy; Clothify Pvt. Ltd.</p>
-      
-    </footer>
+         
+        
+        
+        </div>
+        <div style={{top:0}} >
+         {/*  */}
+        
+         </div>
+        
+    </div>
     </>
   )
 }
