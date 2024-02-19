@@ -30,7 +30,7 @@ function handleRegistration(e){
   else if(emailId.length==0 || Name.length==0 || phone.length==0 || address.length==0 ){
     toast.warning("Please fill up all Details")
 }
-else if((""+phone).length>=10 && (""+phone).length<=13 ){
+else if((""+phone).length<=10 && (""+phone).length>=13 ){
   toast.warning("minimun number of digits should be 10 and maximum can be 13")
 }
   else{

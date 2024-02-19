@@ -25,7 +25,7 @@ fetchdata()
     
    },[])
     return(
-          <div> 
+          <div style={{height:"620px"}}> 
              <h2 id="A">Admin Dashboard</h2>
       
       <br></br>
